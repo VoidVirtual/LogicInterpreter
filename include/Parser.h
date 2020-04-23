@@ -7,8 +7,6 @@ inline int getType(std::string& str)
         return LEFT_BRACE;
     if(str==")")
         return RIGHT_BRACE;
-    if(str=="->")
-        return CONSEQUENT;
     if(str=="|")
         return OR;
     if(str==",")
@@ -27,8 +25,6 @@ inline std::string getString(OperationType _t)
             return "|";
         case AND:
             return ",";
-        case CONSEQUENT:
-            return "->";
         default:
             return "";
     }

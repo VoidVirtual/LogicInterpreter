@@ -20,7 +20,6 @@ enum OperationType
 {
     OR,
     AND,
-    CONSEQUENT,
     LEFT_BRACE,
     RIGHT_BRACE
 };
