@@ -74,9 +74,9 @@ bool Interpreter::isFact(const std::string& name)
 }
 void Interpreter::UpdateFacts()
 {
-    for(auto it: m_rules)
+    for(auto& it: m_rules)
     {
-       for(auto it2: m_rules)
+       for(auto& it2: m_rules)
             it2.second.m_visited = false;
        if(it.second.accept(*this)==TRUE)
             m_result.insert(it.first);
@@ -90,7 +90,7 @@ void Interpreter::PrintNewFacts()
        return;
    }
    std::cout<<"New facts: ";
-   for(auto name: m_result)
+   for(auto& name: m_result)
         std::cout<<name<<" ";
     std::cout<<"\n";
 }
